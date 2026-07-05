@@ -7350,10 +7350,7 @@ mod p2p_backup_http_tests {
         (format!("http://{addr}"), handle, temp_dir)
     }
 
-    async fn post_p2p_backup(
-        base_url: &str,
-        body: &str,
-    ) -> (StatusCode, String) {
+    async fn post_p2p_backup(base_url: &str, body: &str) -> (StatusCode, String) {
         let url = Url::parse(&format!("{base_url}/p2p-draft-backup")).expect("url");
         let host = url.host_str().expect("host");
         let port = url.port().expect("port");

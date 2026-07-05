@@ -1180,6 +1180,10 @@ mod tests {
                 "REDACTED".to_string(),
                 "REDACTED".to_string(),
                 String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
             ]
         );
         assert_ne!(host_token, "");

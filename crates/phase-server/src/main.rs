@@ -7329,8 +7329,8 @@ mod p2p_backup_http_tests {
         }
     }
 
-    async fn spawn_p2p_backup_http_test() -> (String, tokio::task::JoinHandle<()>, tempfile::TempDir)
-    {
+    async fn spawn_p2p_backup_http_test(
+    ) -> (String, tokio::task::JoinHandle<()>, tempfile::TempDir) {
         let temp_dir = tempfile::tempdir().expect("temp dir");
         let app_state = test_app_state(&temp_dir);
         let app = Router::new()
